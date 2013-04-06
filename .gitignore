@@ -1,7 +1,3 @@
-.bundle
-bin
-.chef/checksums
-cookbook_test
 metadata.json
 .vagrant
 vendor.kitchen/
