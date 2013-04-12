@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/motns/strainer.git
-  revision: 59ae9889137d88a6918da8f17079f3a0371eed77
-  branch: standalone_hack
-  specs:
-    strainer (1.0.0)
-      berkshelf (~> 1.3)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -162,6 +154,8 @@ GEM
     slop (3.4.4)
     solve (0.4.2)
       json
+    strainer (2.0.0)
+      berkshelf (~> 1.3)
     systemu (2.5.2)
     test-kitchen (1.0.0.alpha.2)
       celluloid
@@ -189,4 +183,4 @@ DEPENDENCIES
   kitchen-vagrant (~> 0.7.4)
   minitest-chef-handler (~> 0.6.9)
   rake (~> 10.0.4)
-  strainer!
+  strainer (~> 2.0.0)
