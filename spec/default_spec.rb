@@ -19,7 +19,7 @@ describe "papertrail-rsyslog::default" do
         @chef_run.should create_file_with_content( "/etc/rsyslog.d/10-papertrail.conf", "$DefaultNetstreamDriverCAFile /etc/syslog.papertrail.crt")
         @chef_run.should create_file_with_content( "/etc/rsyslog.d/10-papertrail.conf", "$ActionSendStreamDriver gtls")
         @chef_run.should create_file_with_content( "/etc/rsyslog.d/10-papertrail.conf", "$ActionSendStreamDriverMode 1")
-        @chef_run.should create_file_with_content( "/etc/rsyslog.d/10-papertrail.conf", "$ActionSendStreamDriverAuthMode anon")
+        @chef_run.should create_file_with_content( "/etc/rsyslog.d/10-papertrail.conf", "$ActionSendStreamDriverAuthMode x509/name")
       end
 
       it 'should set $ActionResumeRetryCount to "-1"' do

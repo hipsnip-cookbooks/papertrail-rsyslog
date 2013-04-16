@@ -3,8 +3,7 @@
 $DefaultNetstreamDriverCAFile /etc/syslog.papertrail.crt
 $ActionSendStreamDriver gtls
 $ActionSendStreamDriverMode 1
-$ActionSendStreamDriverAuthMode anon # current certificate broken
-#$ActionSendStreamDriverPermittedPeer *.papertrail.com # again, broken certificate
+$ActionSendStreamDriverAuthMode x509/name
 <% end %>
 $ActionResumeRetryCount <%= node['papertrail']['resume_retry_count'] %>
 $ActionQueueType LinkedList # use asynchronous processing
