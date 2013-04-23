@@ -1,4 +1,4 @@
-Description [![Build Status](https://travis-ci.org/hipsnip/papertrail-rsyslog.png)](https://travis-ci.org/hipsnip/papertrail-rsyslog)
+Description [![Build Status](https://travis-ci.org/hipsnip-cookbooks/papertrail-rsyslog.png)](https://travis-ci.org/hipsnip-cookbooks/papertrail-rsyslog)
 ===========
 A simple cookbook for setting up a server to stream logs into Papertrail via a secure
 TCP connection.
@@ -35,7 +35,7 @@ This functionality is currently not available, but will be provided via the Opsc
 
 Development
 ============
-Please refer to our wiki page [here](https://github.com/hipsnip/cookbook-development/wiki/Developing-and-Testing)
+Please refer to the Readme [here](https://github.com/hipsnip-cookbooks/cookbook-development/blob/master/README.md)
 
 
 License and Author
