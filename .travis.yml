@@ -6,3 +6,6 @@ rvm:
 bundler_args: --without integration
 before_script: bundle exec berks install
 script: bundle exec rake cookbook:test
+notifications:
+  email:
+    - travisci@hipsnip.com
