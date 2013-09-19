@@ -88,7 +88,7 @@ describe "papertrail-rsyslog::default" do
           end
 
           it 'should set the forwarding to "cron.*     @@logs.papertrailapp.com:12345"' do
-            @chef_run.should create_file_with_content( "/etc/rsyslog.d/10-papertrail.conf", "cron.*     @@logs.papertrail.com:12345")
+            @chef_run.should create_file_with_content( "/etc/rsyslog.d/10-papertrail.conf", "cron.*     @@logs.papertrailapp.com:12345")
           end
         end
       end
