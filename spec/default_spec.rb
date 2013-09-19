@@ -30,8 +30,8 @@ describe "papertrail-rsyslog::default" do
         @chef_run.should create_file_with_content( "/etc/rsyslog.d/10-papertrail.conf", "$ActionQueueMaxDiskSpace 100M")
       end
 
-      it 'should set the forwarding to "*.*     @@logs.papertrail.com:12345"' do
-        @chef_run.should create_file_with_content( "/etc/rsyslog.d/10-papertrail.conf", "*.*     @@logs.papertrail.com:12345")
+      it 'should set the forwarding to "*.*     @@logs.papertrailapp.com:12345"' do
+        @chef_run.should create_file_with_content( "/etc/rsyslog.d/10-papertrail.conf", "*.*     @@logs.papertrailapp.com:12345")
       end
     end
 
@@ -87,7 +87,7 @@ describe "papertrail-rsyslog::default" do
             @chef_run.should create_file_with_content( "/etc/rsyslog.d/10-papertrail.conf", "$ActionQueueMaxDiskSpace 300M")
           end
 
-          it 'should set the forwarding to "cron.*     @@logs.papertrail.com:12345"' do
+          it 'should set the forwarding to "cron.*     @@logs.papertrailapp.com:12345"' do
             @chef_run.should create_file_with_content( "/etc/rsyslog.d/10-papertrail.conf", "cron.*     @@logs.papertrail.com:12345")
           end
         end
