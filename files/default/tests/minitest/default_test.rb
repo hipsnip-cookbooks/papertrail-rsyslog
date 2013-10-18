@@ -16,7 +16,7 @@ describe_recipe "papertrail-rsyslog::default" do
       file("/etc/rsyslog.d/10-papertrail.conf").wont_include '$ActionSendStreamDriverMode 1'
     end
 
-    file("/etc/rsyslog.d/10-papertrail.conf").must_include '*.*     @@logs.papertrail.com:12345'
+    file("/etc/rsyslog.d/10-papertrail.conf").must_include '*.*     @@logs.papertrailapp.com:12345'
   end
 
   it "rsyslog-gnutls package" do
