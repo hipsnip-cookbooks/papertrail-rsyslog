@@ -3,6 +3,9 @@ Description [![Build Status](https://travis-ci.org/hipsnip-cookbooks/papertrail-
 A simple cookbook for setting up a server to stream logs into Papertrail via a secure
 TCP connection.
 
+> NOTE: While it is fully functional, this cookbook is no longer being actively worked on.
+If you're interested in taking over, please do get in touch!
+
 
 Requirements
 ============
