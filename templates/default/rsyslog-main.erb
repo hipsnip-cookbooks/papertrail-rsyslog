@@ -10,4 +10,4 @@ $ActionQueueType LinkedList # use asynchronous processing
 $ActionQueueFileName /var/log/rsyslog_queue_main # set file name, also enables disk mode
 $ActionQueueSaveOnShutdown on
 $ActionQueueMaxDiskSpace <%= node['papertrail']['queue_disk_space'] %>
-<%= node['papertrail']['syslog_selector'] %>     @@logs.papertrailapp.com:<%= node['papertrail']['port'] %>
+<%= node['papertrail']['syslog_selector'] %>     @@<%= node['papertrail']['host'] %>.papertrailapp.com:<%= node['papertrail']['port'] %>

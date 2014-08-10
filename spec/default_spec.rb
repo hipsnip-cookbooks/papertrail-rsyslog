@@ -94,4 +94,22 @@ describe "papertrail-rsyslog::default" do
       end
     end
   end
+
+  context 'with host set to logs2' do
+    before(:all) do
+      @chef_run = ChefSpec::ChefRunner.new(CHEF_RUN_OPTIONS) do |node|
+        node.set['papertrail']['port'] = 12345
+        node.set['papertrail']['host'] = 'logs2'
+      end
+      @chef_run.converge 'papertrail-rsyslog::default'
+    end
+
+    it { @chef_run.should create_file("/etc/rsyslog.d/10-papertrail.conf") }
+
+    context "/etc/rsyslog.d/10-papertrail.conf file" do
+      it 'should set the forwarding to "*.*     @@logs2.papertrailapp.com:12345"' do
+        @chef_run.should create_file_with_content( "/etc/rsyslog.d/10-papertrail.conf", "*.*     @@logs2.papertrailapp.com:12345")
+      end
+    end
+  end
 end
