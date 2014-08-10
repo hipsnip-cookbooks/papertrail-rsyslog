@@ -17,6 +17,7 @@
 # limitations under the License.
 #
 default['papertrail']['port'] = 0
+default['papertrail']['host'] = 'logs'
 default['papertrail']['resume_retry_count'] = -1
 default['papertrail']['syslog_selector'] = '*.*'
 default['papertrail']['queue_disk_space'] = '100M'

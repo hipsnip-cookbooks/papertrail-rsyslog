@@ -16,6 +16,7 @@ Attributes
 ==========
 
     ['papertrail']['port'] = The Papertrail log destination port number (required)
+    ['papertrail']['host'] = The Papertrail host address (defaults to logs)
     ['papertrail']['syslog_selector'] = The syslog tags and types to stream into Papertrail (defaults to "*.*")
     ['papertrail']['resume_retry_count'] = The number of times to retry the sending of failed messages (defaults to unlimited)
     ['papertrail']['queue_disk_space'] = The maximum disk space allowed for queues (default to 100M)
