@@ -18,8 +18,7 @@
 #
 
 # Make sure a port number has been set
-# @TODO: Better ways to Error out in Chef?
-raise "You have to set a Papertrail destination port number in the attribute ['papertrail']['port']" if node['papertrail']['port'].zero?
+Chef::Application.fatal! "You have to set a Papertrail destination port number in the attribute ['papertrail']['port']" if node['papertrail']['port'].zero?
 
 include_recipe "rsyslog::default"
 
