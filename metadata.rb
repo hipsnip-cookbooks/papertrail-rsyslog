@@ -14,6 +14,12 @@ attribute "papertrail/port",
   :description => "The port number on the papertrail service that we should be sending log entries to",
   :required => "required"
 
+attribute "papertrail/host",
+  :display_name => "Host Address",
+  :description => "The host address on the papertrail service that we should be sending log entries to",
+  :type => "string",
+  :default => "logs"
+
 attribute "papertrail/syslog_selector",
   :display_name => "Syslog Selector",
   :description => "The syslog tags that should be piped into Papertrail - defaults to all",
