@@ -7,7 +7,7 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          "1.1.1"
 supports 'ubuntu', ">= 12.04"
 
-depends "rsyslog", "~> 1.5.0"
+depends "rsyslog", "~> 1.12.1"
 
 attribute "papertrail/port",
   :display_name => "Port number",
