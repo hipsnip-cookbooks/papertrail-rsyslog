@@ -4,6 +4,7 @@ $DefaultNetstreamDriverCAFile /etc/syslog.papertrail.crt
 $ActionSendStreamDriver gtls
 $ActionSendStreamDriverMode 1
 $ActionSendStreamDriverAuthMode x509/name
+$ActionSendStreamDriverPermittedPeer *.papertrailapp.com
 <% end %>
 $ActionResumeRetryCount <%= node['papertrail']['resume_retry_count'] %>
 $ActionQueueType LinkedList # use asynchronous processing
